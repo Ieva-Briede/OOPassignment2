@@ -6,7 +6,7 @@ public class District {
     private String title;
     private String city;
     private int districtID;
-    private ArrayList<Officer> officersInTheDistrict;
+    private ArrayList<Officer> officersInTheDistrict = new ArrayList<>();
 
     @Override
     public String toString() {
@@ -67,6 +67,17 @@ public class District {
            return true;
        } return false;
 
+    }
+
+    public boolean removeOfficer(String name, String surname)
+    {
+        if(!name.isEmpty() && !surname.isEmpty()) {
+            officersInTheDistrict.removeIf(person -> person.getName().equals(name)
+                    && person.getSurname().equals(surname));
+            return true;
+
+        }
+        return false;
     }
 
     public float calculateAvgLevelInDistrict(){
