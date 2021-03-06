@@ -58,6 +58,10 @@ public class Main {
             System.out.println("District 2 is better than District 1 based on level of Officers");
         }
 
+        joinedDistrict.remove(0); // are they just removed from the array list but they are still in arraylist District 1?
+        System.out.println(district1);
+        System.out.println(joinedDistrict);
+
     }
 
 }
