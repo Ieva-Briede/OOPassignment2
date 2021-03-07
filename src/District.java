@@ -61,17 +61,17 @@ public class District {
         this.officersInTheDistrict = officersInTheDistrict;
     }
 
-    public boolean addNewOfficer(Officer officer){
-       if (officer != null){
-           officersInTheDistrict.add(officer);
-           return true;
-       } return false;
+    public boolean addNewOfficer(Officer officer) {
+        if (officer != null) {
+            officersInTheDistrict.add(officer);
+            return true;
+        }
+        return false;
 
     }
 
-    public boolean removeOfficer(String name, String surname)
-    {
-        if(!name.isEmpty() && !surname.isEmpty()) {
+    public boolean removeOfficer(String name, String surname) {
+        if (!name.isEmpty() && !surname.isEmpty()) {
             officersInTheDistrict.removeIf(person -> person.getName().equals(name)
                     && person.getSurname().equals(surname));
             return true;
@@ -80,13 +80,13 @@ public class District {
         return false;
     }
 
-    public float calculateAvgLevelInDistrict(){
+    public float calculateAvgLevelInDistrict() {
         ArrayList<Officer> officersInTheDistrict = getOfficersInTheDistrict();
         float sum = 0;
-        for (Officer officer : officersInTheDistrict){
+        for (Officer officer : officersInTheDistrict) {
             sum += officer.calculateLevel();
         }
-        float averageLevel = sum/officersInTheDistrict.size();
+        float averageLevel = sum / officersInTheDistrict.size();
         return averageLevel;
     }
 }

@@ -49,10 +49,10 @@ public class Main {
         System.out.println("There are " + totalAmountOfOfficers + " officers in both districts together");
         System.out.println("Average level of both districts is " + level / joinedDistrict.size());
 
-        if (district1.calculateAvgLevelInDistrict() == district2.calculateAvgLevelInDistrict()){
+
+        if (district1.calculateAvgLevelInDistrict() == district2.calculateAvgLevelInDistrict()) {
             System.out.println("Both districts are equal according to level of Officers");
-        }
-        else if (district1.calculateAvgLevelInDistrict()> district2.calculateAvgLevelInDistrict()) {
+        } else if (district1.calculateAvgLevelInDistrict() > district2.calculateAvgLevelInDistrict()) {
             System.out.println("District 1 is better than District 2 based on level of Officers");
         } else {
             System.out.println("District 2 is better than District 1 based on level of Officers");
